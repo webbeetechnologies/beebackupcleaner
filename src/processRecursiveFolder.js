@@ -91,8 +91,8 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
     }
 
     if(!options.dry) {
-        for(let file of backupsToDelete) {
-            await fs.remove(file);
+        for(let backup of backupsToDelete) {
+            await fs.unlink(backup.path);
         }
     } else {
         // console.log(backupsToKeep, backupsToDelete)

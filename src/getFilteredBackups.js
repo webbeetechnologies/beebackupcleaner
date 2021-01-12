@@ -39,7 +39,8 @@ module.exports = async (backupRoot, {searchStr, from, to} = {}) => {
             comment: matchResult[4],
             time: new Date(decodeDateFilename(matchResult[5])),
             installation: matchResult[2],
-            commit: matchResult[6]
+            commit: matchResult[6],
+            path: backupLine
         };
 
         if(
