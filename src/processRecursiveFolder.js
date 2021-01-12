@@ -98,7 +98,7 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
             await fs.unlink(backup.path);
         }
     } else {
-        console.log(backupsToKeep, backupsToDelete)
+        console.log(backupsToKeep.map(b => b.relativePath), backupsToDelete.map(b => b.relativePath))
     }
 
     return {backupsToKeep, backupsToDelete};
