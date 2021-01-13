@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+(cd /home/tobias/Development/beebackupcleaner && node src/application.js "$@")
