@@ -78,7 +78,7 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
         const subDirs = getDirectories(folder);
         for(let i = 0; i < subDirs.length; i++) {
             const theStuff = await processFolderRecursively(subDirs[i], options, depth++);
-            console.log(theStuff)
+            // console.log(theStuff)
             const {backupsToKeep, backupsToDelete} = theStuff;
 
             allBackupsToKeep = allBackupsToKeep.concat(backupsToKeep);
@@ -97,13 +97,6 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
         for(let backup of backupsToDelete) {
             await fs.unlink(backup.path);
         }
-    } else {
-        console.log('KEEP:')
-        console.log(backupsToKeep.map(b => b.relativePath));
-
-        console.log('DELETE:')
-        console.log(backupsToDelete.map(b => b.relativePath));
     }
-
     return {backupsToKeep, backupsToDelete};
 };

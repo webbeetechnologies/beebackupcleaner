@@ -1,6 +1,28 @@
 const
     program = require('commander'),
-    processRecursiveFolder = require('./processRecursiveFolder');
+    processRecursiveFolder = require('./processRecursiveFolder'),
+    { createLogger, format, transports }  = require('winston');
+
+
+const logger = createLogger({
+    level: 'info',
+    format: format.combine(
+        format.timestamp({
+            format: 'YYYY-MM-DD HH:mm:ss'
+        }),
+        format.errors({ stack: true }),
+        format.splat(),
+        format.json()
+    ),
+    defaultMeta: {},
+    transports: [
+        new transports.Console({
+            format: format.combine(
+                format.simple()
+            )
+        })
+    ]
+});
 
 
 const runAndExitOnError = (closure) => {
@@ -28,7 +50,16 @@ program
     .option('--recursive <recursive>', 'scan directories recursively for levels (default: 1 means non-recursive, 2 would mean to also scan subfolders, 3 also the subfolders of subfolders)', 1)
 
     .action(runAndExitOnError(async (folder, options) => {
-        return await processRecursiveFolder(folder, options, new Date('2021-01-12T21:22:42.376Z'))
+        logger.info('started backup cleaning');
+        try {
+            const {backupsToKeep, backupsToDelete} = await processRecursiveFolder(folder, options, new Date('2021-01-12T21:22:42.376Z'))
+            logger.info('KEPT: '+JSON.stringify(backupsToKeep.map(b => b.relativePath)));
+            logger.info('REMOVED: '+JSON.stringify(backupsToDelete.map(b => b.relativePath)));
+            logger.info('done cleaning backups');
+        } catch(err) {
+            logger.error(err);
+        }
+
     }));
 
 program.parse(process.argv);
