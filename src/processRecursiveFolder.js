@@ -64,9 +64,9 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
     }
 
     const processFolderRecursively = async (folder, options, depth = 0) => {
-        console.log('processFolderRecursively', folder, depth)
+        // console.log('processFolderRecursively', folder, depth)
         if(depth >= options.recursive) {
-            console.log('processFolderRecursively depth >= options.recursive', folder, depth)
+            // console.log('processFolderRecursively depth >= options.recursive', folder, depth)
             return {backupsToKeep: [], backupsToDelete: []};
         }
 
