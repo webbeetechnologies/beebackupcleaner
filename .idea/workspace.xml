@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd217aec-f6b6-4879-af2a-76cad0273c57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processRecursiveFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/processRecursiveFolder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/2021-01-07T03__VB__00__VB__07__BV__333Z__AZ__nightly.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/awdwadawd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/nocomment-20201025-1733-7d9fec1c2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/nocomment-20201114-1733-7d9fec1c2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/nocomment-20201205-1733-7d9fec1c2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/nocomment-20210101-1733-7d9fec1c2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/malte/yolo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/tobias/nocomment-20201221-1733-7d9fec1c2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testbackups2/tobias/nocomment-20210111-1733-7d9fec1c2.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/beebackupcleaner" beforeDir="false" afterPath="$PROJECT_DIR$/bin/beebackupcleaner" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610472689975</updated>
       <workItem from="1610472691286" duration="14604000" />
-      <workItem from="1610524248150" duration="5190000" />
+      <workItem from="1610524248150" duration="5553000" />
     </task>
     <servers />
   </component>
