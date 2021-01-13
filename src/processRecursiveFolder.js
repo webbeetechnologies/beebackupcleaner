@@ -64,9 +64,13 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
     }
 
     const processFolderRecursively = async (folder, options, depth = 0) => {
+        console.log('processFolderRecursively', folder, depth)
         if(depth >= options.recursive) {
-            return;
+            console.log('processFolderRecursively depth >= options.recursive', folder, depth)
+            return {backupsToKeep: [], backupsToDelete: []};
         }
+
+        depth++;
 
         let allBackupsToKeep  = [];
         let allBackupsToDelete  = [];
@@ -77,8 +81,8 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
 
         const subDirs = getDirectories(folder);
         for(let i = 0; i < subDirs.length; i++) {
-            const theStuff = await processFolderRecursively(subDirs[i], options, depth++);
-            // console.log(theStuff)
+            const theStuff = await processFolderRecursively(subDirs[i], options, depth);
+            // console.log('processFolderRecursively', theStuff)
             const {backupsToKeep, backupsToDelete} = theStuff;
 
             allBackupsToKeep = allBackupsToKeep.concat(backupsToKeep);
@@ -100,3 +104,10 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
     }
     return {backupsToKeep, backupsToDelete};
 };
+
+//a
+//b
+//c
+//d
+//e
+//f

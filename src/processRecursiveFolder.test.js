@@ -1,7 +1,7 @@
 const processRecursiveFolder = require('./processRecursiveFolder')
 
 test('processRecursiveFolder', async () => {
-    const {backupsToKeep, backupsToDelete} = await processRecursiveFolder('./testbackups', {
+    const {backupsToDelete} = await processRecursiveFolder('./testbackups', {
         recent: 1,
         all: 7,
         daily: 14,
@@ -18,7 +18,9 @@ test('processRecursiveFolder', async () => {
     expect(backupsToDeletePaths.indexOf('malte/nocomment-20210101-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
     expect(backupsToDeletePaths.indexOf('malte/nocomment-20201205-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
     expect(backupsToDeletePaths.indexOf('malte/nocomment-20201114-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
-    expect(backupsToDeletePaths.indexOf('malte/nocomment-20201025-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
+    expect(backupsToDeletePaths.indexOf('malte/nodcomment-20201025-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
+    expect(backupsToDeletePaths.indexOf('malte/before_update_superdevtest-20210113-1113-01421c12.tar.gz')).toBeLessThan(0);
+    expect(backupsToDeletePaths.indexOf('malte/supertest-20210113-1110-7d9fec1c2.tar.gz')).toBeLessThan(0);
 
     expect(backupsToDeletePaths.indexOf('tobias/nocomment-20210111-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
     expect(backupsToDeletePaths.indexOf('tobias/nocomment-20201221-1733-7d9fec1c2.tar.gz')).toBeLessThan(0);
