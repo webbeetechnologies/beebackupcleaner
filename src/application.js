@@ -46,7 +46,7 @@ program
     .option('--weekly <weekly>', 'Number of weeks for which to keep one backup of the last day in the week', 2)
     .option('--monthly <monthly>', 'Number of months for which to keep one backup each', 1)
     .option('--maxdelete <maxdelete>', 'If more backups than this number are found, dont delete them (use --force if you are sure of what you are doing).', 30)
-    .option('--force <force>', 'force deletion', false)
+    .option('--force', 'force deletion', false)
     .option('--dry', 'dont do anything, just try and log', false)
     .option('--recursive <recursive>', 'scan directories recursively for levels (default: 1 means non-recursive, 2 would mean to also scan subfolders, 3 also the subfolders of subfolders)', 1)
 
