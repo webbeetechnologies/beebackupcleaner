@@ -50,18 +50,19 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
                 return false;
             })
 
-        // let dkeep = groupKeep(allBackups, 'yyyy-MM-dd', {days: options.daily});
-        backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, 'yyyy-MM-dd', {days: options.daily}));
-        backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, time => format(time, 'yyyy-MM')+'-WN-'+getWeek(time), {weeks: options.weekly}));
-        backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, 'yyyy-MM', {months: options.monthly}));
+        if(options.daily > 0) {
+            backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, 'yyyy-MM-dd', {days: options.daily}));
+        }
+        if(options.weekly > 0) {
+            backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, time => format(time, 'yyyy-MM')+'-WN-'+getWeek(time), {weeks: options.weekly}));
+        }
+        if(options.monthly > 0) {
+            backupsToKeep = backupsToKeep.concat(groupKeep(allBackups, 'yyyy-MM', {months: options.monthly}));
+        }
 
         backupsToKeep = _.uniqBy(backupsToKeep, 'name');
 
-        const backupsToDelete = allBackups.filter(a => backupsToKeep.indexOf(a) < 0)
-        _
-
-        // console.log(backupsToKeep);
-        // console.log(backupsToDelete);
+        const backupsToDelete = allBackups.filter(a => backupsToKeep.indexOf(a) < 0);
 
         return {backupsToKeep, backupsToDelete};
     }
