@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-(cd /home/tobias/Development/beebackupcleaner && /home/tobias/.nvm/versions/node/v12.20.0/bin/node src/application.js "$@")
+(cd /home/tobias/Development/beebackupcleaner && /home/tobias/.nvm/versions/node/v12.18.3/bin/node src/application.js "$@")
