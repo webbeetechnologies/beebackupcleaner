@@ -19,9 +19,12 @@ module.exports = async (folder, options, referenceDate = new Date()) => {
 
     const groupKeep = (backups, grouper, subtractQuery) => {
         let filteredBackups = backups.filter((b) => {
-            return b.time > sub(referenceDate, subtractQuery);
+            const subtractedReferenceDate = sub(referenceDate, subtractQuery);
+            return b.time > subtractedReferenceDate;
         });
-        filteredBackups =  _.uniqBy(backups, ({time}) => {
+
+
+        filteredBackups =  _.uniqBy(filteredBackups, ({time}) => {
             return _.isFunction(grouper) ? grouper(time)
                 : format(time, grouper);
         });
