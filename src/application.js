@@ -41,7 +41,7 @@ const runAndExitOnError = (closure) => {
 program
     .command('clean <folder>')
     .option('--recent <recent>', 'Number of most recent backups to always keep', 1)
-    .option('--all <all>', 'Number of days for which to keep all backups', 3)
+    .option('--all <all>', 'Number of days for which to keep all backups', 2)
     .option('--daily <daily>', 'Number of days for which to keep a backup each day', 5)
     .option('--weekly <weekly>', 'Number of weeks for which to keep one backup of the last day in the week', 2)
     .option('--monthly <monthly>', 'Number of months for which to keep one backup each', 1)
