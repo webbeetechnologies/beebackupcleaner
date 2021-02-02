@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd217aec-f6b6-4879-af2a-76cad0273c57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/beebackupcleaner" beforeDir="false" afterPath="$PROJECT_DIR$/bin/beebackupcleaner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,12 @@
       <option name="presentableId" value="Default" />
       <updated>1610472689975</updated>
       <workItem from="1610472691286" duration="14604000" />
-      <workItem from="1610524248150" duration="5553000" />
+      <workItem from="1610524248150" duration="7776000" />
+      <workItem from="1611028197743" duration="504000" />
+      <workItem from="1611335393951" duration="545000" />
+      <workItem from="1611427431293" duration="1131000" />
+      <workItem from="1611512027352" duration="590000" />
+      <workItem from="1612254666793" duration="194000" />
     </task>
     <servers />
   </component>
@@ -209,14 +214,7 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>vmscript://file:///home/tobias/Development/beebackupcleaner/src/processRecursiveFolder.js</url>
           <line>79</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/application.js</url>
-          <line>52</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

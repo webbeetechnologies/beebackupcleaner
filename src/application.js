@@ -41,7 +41,7 @@ program
     .command('clean <folder>')
     .option('--recent <recent>', 'Number of most recent backups to always keep', 1)
     .option('--all <all>', 'Number of days for which to keep all backups', 7)
-    .option('--daily <daily>', 'Number of days for which to keep most recent records', 14)
+    .option('--daily <daily>', 'Number of days for which to keep dayli recent records', 14)
     .option('--weekly <weekly>', 'Number of weeks for which to keep one backup each', 4)
     .option('--monthly <monthly>', 'Number of months for which to keep one backup each', 3)
     .option('--maxdelete <maxdelete>', 'If more backups than this number are found, dont delete them (use --force if you are sure of what you are doing).', 30)
