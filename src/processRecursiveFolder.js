@@ -18,15 +18,15 @@ const getDirectories = source =>
 module.exports = async (folder, options, referenceDate = new Date()) => {
 
     const groupKeep = (backups, grouper, subtractQuery) => {
-        backups = backups.filter((b) => {
+        let filteredBackups = backups.filter((b) => {
             return b.time > sub(referenceDate, subtractQuery);
         });
-        backups =  _.uniqBy(backups, ({time}) => {
+        filteredBackups =  _.uniqBy(backups, ({time}) => {
             return _.isFunction(grouper) ? grouper(time)
                 : format(time, grouper);
         });
 
-        return backups;
+        return filteredBackups;
     };
 
     const processFolder = async (folder, options) => {
