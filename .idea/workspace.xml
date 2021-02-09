@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dd217aec-f6b6-4879-af2a-76cad0273c57" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/beebackupcleaner" beforeDir="false" afterPath="$PROJECT_DIR$/bin/beebackupcleaner" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,7 @@
       <workItem from="1611512027352" duration="590000" />
       <workItem from="1612254666793" duration="11498000" />
       <workItem from="1612437685811" duration="593000" />
-      <workItem from="1612863858658" duration="385000" />
+      <workItem from="1612863858658" duration="1112000" />
     </task>
     <servers />
   </component>
